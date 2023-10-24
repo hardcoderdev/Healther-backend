@@ -56,8 +56,8 @@ dependencies {
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit:$kotlinVersion")
 }
 
-ktor {
-    fatJar {
-        archiveFileName.set("fat.jar")
+tasks.withType<Jar> {
+    manifest {
+        attributes["Main-Class"] = "hardcoder.dev.healtherbackend.ApplicationKt"
     }
 }
