@@ -58,7 +58,7 @@ dependencies {
 
 tasks.jar {
     manifest {
-        attributes["Main-Class"] = "ApplicationKt"
+        attributes["Main-Class"] = "hardcoder.dev.healtherbackend.ApplicationKt"
     }
     configurations["compileClasspath"].forEach { file: File ->
         from(zipTree(file.absoluteFile))
