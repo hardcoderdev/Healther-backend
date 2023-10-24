@@ -12,7 +12,7 @@ object DatabaseFactory {
 
     fun init() {
         val driverClassName = System.getenv("JDBC_DRIVER")
-        val jdbcURL = System.getenv("DATABASE_URL")
+        val jdbcURL = System.getenv("DATABASE_PRIVATE_URL")
         val database = Database.connect(
             url = jdbcURL,
             driver = driverClassName,
