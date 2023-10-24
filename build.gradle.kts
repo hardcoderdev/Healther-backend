@@ -55,7 +55,3 @@ dependencies {
     testImplementation("io.ktor:ktor-server-tests-jvm:$ktorVersion")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit:$kotlinVersion")
 }
-
-tasks.jar {
-    manifest.attributes["Main-Class"] = "io.ktor.server.netty.EngineMain"
-}
