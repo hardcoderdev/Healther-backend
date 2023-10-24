@@ -16,6 +16,8 @@ object DatabaseFactory {
         val database = Database.connect(
             url = jdbcURL,
             driver = driverClassName,
+            user = System.getenv("PGUSER"),
+            password = System.getenv("PGPASSWORD"),
         )
 
         transaction(database) {
