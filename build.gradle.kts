@@ -57,5 +57,5 @@ dependencies {
 }
 
 tasks.jar {
-    manifest.attributes["Main-Class"] = "hardcoder.dev.healtherbackend.ApplicationKt.module"
+    manifest.attributes["Main-Class"] = "hardcoder.dev.healtherbackend.ApplicationKt"
 }
