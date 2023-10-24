@@ -57,5 +57,5 @@ dependencies {
 }
 
 tasks.jar {
-    manifest.attributes["Main-Class"] = "hardcoder.dev.healtherbackend.ApplicationKt"
+    manifest.attributes["Main-Class"] = "io.ktor.server.netty.EngineMain"
 }
