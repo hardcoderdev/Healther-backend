@@ -13,9 +13,13 @@ object DatabaseFactory {
     fun init() {
         val driverClassName = System.getenv("JDBC_DRIVER")
         val jdbcURL = System.getenv("DATABASE_PRIVATE_URL")
+        val user = System.getenv("PGUSER")
+        val password = System.getenv("PGPASSWORD")
         val database = Database.connect(
             url = jdbcURL,
             driver = driverClassName,
+            user = user,
+            password = password
         )
 
         transaction(database) {
