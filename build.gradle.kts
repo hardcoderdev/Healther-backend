@@ -9,7 +9,7 @@ val koinVersion: String by project
 
 plugins {
     kotlin("jvm") version "1.8.20"
-    id("io.ktor.plugin") version "2.2.4"
+    id("io.ktor.plugin") version "2.3.5"
     id("org.jetbrains.kotlin.plugin.serialization") version "1.8.20"
 }
 
@@ -54,10 +54,4 @@ dependencies {
 
     testImplementation("io.ktor:ktor-server-tests-jvm:$ktorVersion")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit:$kotlinVersion")
-}
-
-tasks.withType<Jar> {
-    manifest {
-        attributes["Main-Class"] = "hardcoder.dev.healtherbackend.ApplicationKt"
-    }
 }
