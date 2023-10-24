@@ -1,4 +1,4 @@
-package hardcoder.dev.plugins
+package hardcoder.dev.healtherbackend.plugins
 
 import io.ktor.server.plugins.cachingheaders.*
 import io.ktor.http.content.*
