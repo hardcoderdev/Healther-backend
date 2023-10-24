@@ -56,8 +56,11 @@ dependencies {
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit:$kotlinVersion")
 }
 
-ktor {
-    fatJar {
-        archiveFileName.set("fat.jar")
+tasks.jar {
+    manifest {
+        attributes["Main-Class"] = "ApplicationKt"
+    }
+    configurations["compileClasspath"].forEach { file: File ->
+        from(zipTree(file.absoluteFile))
     }
 }
