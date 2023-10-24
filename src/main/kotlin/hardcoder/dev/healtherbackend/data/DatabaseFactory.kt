@@ -11,9 +11,13 @@ import org.jetbrains.exposed.sql.transactions.transaction
 object DatabaseFactory {
 
     fun init() {
-        val driverClassName = "org.h2.Driver"
-        val jdbcURL = "jdbc:h2:file:./build/db"
-        val database = Database.connect(url = jdbcURL, driver = driverClassName)
+        val driverClassName = System.getenv("JDBC_DRIVER")
+        val jdbcURL = System.getenv("DATABASE_URL")
+        val database = Database.connect(
+            url = jdbcURL,
+            driver = driverClassName,
+        )
+
         transaction(database) {
             SchemaUtils.create(
                 AdviceTable,

@@ -4,7 +4,6 @@ val logbackVersion: String by project
 val exposedVersion: String by project
 val hikaricpVersion: String by project
 val postgresVersion: String by project
-val h2Version: String by project
 val koinVersion: String by project
 
 plugins {
@@ -42,7 +41,6 @@ dependencies {
 
     implementation("io.insert-koin:koin-ktor:$koinVersion")
 
-    implementation("com.h2database:h2:$h2Version")
     implementation("org.postgresql:postgresql:$postgresVersion")
     implementation("com.zaxxer:HikariCP:$hikaricpVersion")
     implementation("org.jetbrains.exposed:exposed-core:$exposedVersion")
